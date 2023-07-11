@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1b0567574ccd9bb344764b25a2e972ef27f1d976cd5aa315db3ea7e358c0b443.html">Pedir Muestra Gratis Estando Logueado Como Usuario</a></span>
+                > <span class="truncate-60"><a
+                    href="2aa1219125ad9fd4312af33b04c835efe0ad760bd61924a7191b4e48760b9e42.html">Pedir muestra gratis logueado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="bi bi-chat-text"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-05-2023 21:50</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Pedir Muestra Gratis Estando Logueado Como Usuario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Pedir muestra gratis logueado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando Me logueo &lt;correo&gt; y &lt;contrasena&gt;<br>Y ingreso a la seccion de muestras gratis<br>Y filtro por combinaciones de categorias<br>Cuando escojo el tipo de usuario que soy y agrego el producto<br>Y solicito mi muestra gratis e ingreso al formulario de datos de envio<br>Y confirmo que los datos de envio son correctos<br>Entonces deberia ver un mensaje indicando que recibimos la solicitud de muestras gratis</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" 1: Pedir muestra gratis logueado ({correo=falsemail08@gg.col, contrasena=123456})" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Dado que me encuentro en la pagina de tena" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Pragma abrir navegador" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" pragma opens the browser at https://d92wr353oox0h.cloudfront.net/" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Pragma abrir navegador (completed)" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Dado que me encuentro en la pagina de tena (completed)" width="1920"/>
+                <img src="958991f370a4aded2ee8abd0df489572801fde67bd96691ba422d73de9c8f84b.png" title=" Cuando ingreso a la seccion de iniciar sesion" width="1920"/>
+                <img src="958991f370a4aded2ee8abd0df489572801fde67bd96691ba422d73de9c8f84b.png" title=" Pragma ingresa a inicia sesion" width="1920"/>
+                <img src="958991f370a4aded2ee8abd0df489572801fde67bd96691ba422d73de9c8f84b.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="7702a8e41fffadf083ec19a0b6cfea605d5045719a8a0846562cfb804a85a2f1.png" title=" pragma clicks on Boton para ingresar a la opcion de inicio de sesion" width="1920"/>
+                <img src="7702a8e41fffadf083ec19a0b6cfea605d5045719a8a0846562cfb804a85a2f1.png" title=" Pragma ingresa a inicia sesion (completed)" width="1920"/>
+                <img src="7702a8e41fffadf083ec19a0b6cfea605d5045719a8a0846562cfb804a85a2f1.png" title=" Cuando ingreso a la seccion de iniciar sesion (completed)" width="1920"/>
+                <img src="25733ef20d5bb20c9604cb01701dac784c76b7751fec4100cd854f45ef0c3ec8.png" title=" Cuando Me logueo falsemail08@gg.col y 123456" width="1920"/>
+                <img src="25733ef20d5bb20c9604cb01701dac784c76b7751fec4100cd854f45ef0c3ec8.png" title=" Pragma inicia sesion correo" width="1920"/>
+                <img src="25733ef20d5bb20c9604cb01701dac784c76b7751fec4100cd854f45ef0c3ec8.png" title=" pragma clicks on Boton seleccionar la opcion de login con correo" width="1920"/>
+                <img src="ad0e460dd8d5dfab94638c436fa6104c2b0e2abe159e3988af6f90fd43d000b0.png" title=" pragma enters 'falsemail08@gg.col' into Campo para ingresar el correo electronico" width="1920"/>
+                <img src="6dd04bb922abeda10c19ac2e95e9e38381c3aad3d4d5c730ff2861d4379e2bee.png" title=" pragma enters '123456' into Campo para ingresar la contrasena" width="1920"/>
+                <img src="bd92ef9d99e46ef65eeb25aae07e14ff98975ac15cb45913fc0d573ff77058a8.png" title=" pragma clicks on Boton para iniciar la sesion" width="1920"/>
+                <img src="bd92ef9d99e46ef65eeb25aae07e14ff98975ac15cb45913fc0d573ff77058a8.png" title=" Pragma inicia sesion correo (completed)" width="1920"/>
+                <img src="bd92ef9d99e46ef65eeb25aae07e14ff98975ac15cb45913fc0d573ff77058a8.png" title=" Cuando Me logueo falsemail08@gg.col y 123456 (completed)" width="1920"/>
+                <img src="24773f8741202fb0e3b0710ff970e3037fa69fb35982edf0e3a55122ea557476.png" title=" Y ingreso a la seccion de muestras gratis" width="1920"/>
+                <img src="24773f8741202fb0e3b0710ff970e3037fa69fb35982edf0e3a55122ea557476.png" title=" Pragma ingresar muestra gratis" width="1920"/>
+                <img src="24773f8741202fb0e3b0710ff970e3037fa69fb35982edf0e3a55122ea557476.png" title=" pragma clicks on Boton a la seccion de muestra gratis" width="1920"/>
+                <img src="24773f8741202fb0e3b0710ff970e3037fa69fb35982edf0e3a55122ea557476.png" title=" Pragma ingresar muestra gratis (completed)" width="1920"/>
+                <img src="24773f8741202fb0e3b0710ff970e3037fa69fb35982edf0e3a55122ea557476.png" title=" Y ingreso a la seccion de muestras gratis (completed)" width="1920"/>
+                <img src="d5619923c00fe54025203a03f9c23839e42181795027d67feb15e7796b6fff6d.png" title=" Y filtro por combinaciones de categorias" width="1920"/>
+                <img src="d5619923c00fe54025203a03f9c23839e42181795027d67feb15e7796b6fff6d.png" title=" Pragma muestra gratis filtro" width="1920"/>
+                <img src="d5619923c00fe54025203a03f9c23839e42181795027d67feb15e7796b6fff6d.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="cd172ed1ee1efbf2ddcba799245402dab44634cb6418cbe920be147f5bd434c8.png" title=" pragma clicks on Boton para seleccionar la opcion  PANALES dentro de la seccion de categorias" width="1920"/>
+                <img src="e9b9daa9e6af2ed4e6ecd7c4aeb2efe7152b3b5c3a0ebe64a433f7c557ee5ae1.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="5458a00fc3faf0ae481118d86a1aa6662d8a1e162e095777529b221e9a4de4b3.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de LINEA" width="1920"/>
+                <img src="ccc8e88a052cf7771aeaa78624868a350d1324b38a450f6e8b4e6705088afe2b.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="6bf9c1028e0ee7c18751176e62cb7add13865a36c58338800b88219c9384de76.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de USUARIO" width="1920"/>
+                <img src="2e05a6ea56778a656e862a549115d99c45bd9c3e39160840cbfd9260ed16e1ac.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="9570d7a9dae4ca61ad4ef23c9669cc3775f1ae7311dd81a74057fd94b6825b97.png" title=" pragma clicks on Boton para seleccionar la opcion FUERTE dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="eead6270bd4d2e44f98e84e909179ac2d6d9d4ba54c49cf4f1c07bece8cdf5ee.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="41f3145411e25fa8464ade758fbb6e6c73ac02ff0a549a14456521b16613e4cb.png" title=" pragma clicks on Boton para seleccionar cualquiera de los productos que se mostraran una vez se realiza el filtro" width="1920"/>
+                <img src="41f3145411e25fa8464ade758fbb6e6c73ac02ff0a549a14456521b16613e4cb.png" title=" Pragma muestra gratis filtro (completed)" width="1920"/>
+                <img src="41f3145411e25fa8464ade758fbb6e6c73ac02ff0a549a14456521b16613e4cb.png" title=" Y filtro por combinaciones de categorias (completed)" width="1920"/>
+                <img src="ee66db9a4f855337a81ebcbcc80a6d573460fcd9709f2ad1c6f2b06a36928123.png" title=" Cuando escojo el tipo de usuario que soy y agrego el producto" width="1920"/>
+                <img src="ee66db9a4f855337a81ebcbcc80a6d573460fcd9709f2ad1c6f2b06a36928123.png" title=" Pragma muestras gratis interna prod" width="1920"/>
+                <img src="ee66db9a4f855337a81ebcbcc80a6d573460fcd9709f2ad1c6f2b06a36928123.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="a545110d5edd81a36d3d5eb735c69cfed64e0fa24faf830f34611a20051d6193.png" title=" pragma clicks on Boton interno de solicitar muestra para que nos lleve hasta la seccion de donde se selecciona el tipo de usuario que solicita la muestra" width="1920"/>
+                <img src="fe4ab1132d8650bd198c2da49cdaa1c890e332c0454534fc188874cb98178325.png" title=" pragma clicks on Boton para seleccionar la talla L en los productos que contengan talla" width="1920"/>
+                <img src="3c77476e5b55cecea7a0e6b2e528bd785ecea53ea149cd14b88241fbd8dd103e.png" title=" pragma clicks on Boton para seleccionar el tipo de solicitante como cuidador NO profesional" width="1920"/>
+                <img src="9258a95fd08c2568d73ecb5a93d8e9862a0c3f1d25ce1c38efc64703e72d3bd8.png" title=" pragma clicks on Boton para agregar productos a la seccion inferior de muestra gratis" width="1920"/>
+                <img src="f1013e9bdc46a39d023691347c70e4f95535ddca72d4f1e9f8441d1c77caaf0e.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="02dc54592c449177fc0a2f2843e6352a2c7275576e7fde055aa433c2c198a98c.png" title=" pragma clicks on Boton seleccionar las muestras en el home una vez las has agregado al carrito" width="1920"/>
+                <img src="02dc54592c449177fc0a2f2843e6352a2c7275576e7fde055aa433c2c198a98c.png" title=" Pragma muestras gratis interna prod (completed)" width="1920"/>
+                <img src="02dc54592c449177fc0a2f2843e6352a2c7275576e7fde055aa433c2c198a98c.png" title=" Cuando escojo el tipo de usuario que soy y agrego el producto (completed)" width="1920"/>
+                <img src="c8c523857aa30d0f7c1ac0cae52678c88e1fc6934736eba8d35dd38a2fc17402.png" title=" Y solicito mi muestra gratis e ingreso al formulario de datos de envio" width="1920"/>
+                <img src="c8c523857aa30d0f7c1ac0cae52678c88e1fc6934736eba8d35dd38a2fc17402.png" title=" Pragma formulario muestra gratis" width="1920"/>
+                <img src="c8c523857aa30d0f7c1ac0cae52678c88e1fc6934736eba8d35dd38a2fc17402.png" title=" pragma clicks on Boton para ingresar a la segunda parte del formulario de pedido de muestra" width="1920"/>
+                <img src="c8c523857aa30d0f7c1ac0cae52678c88e1fc6934736eba8d35dd38a2fc17402.png" title=" Pragma formulario muestra gratis (completed)" width="1920"/>
+                <img src="c8c523857aa30d0f7c1ac0cae52678c88e1fc6934736eba8d35dd38a2fc17402.png" title=" Y solicito mi muestra gratis e ingreso al formulario de datos de envio (completed)" width="1920"/>
+                <img src="0808ff93d100a845ae7e89faba48ed0f0e04d4ab989b1b52260e4b24a4542382.png" title=" Y confirmo que los datos de envio son correctos" width="1920"/>
+                <img src="0808ff93d100a845ae7e89faba48ed0f0e04d4ab989b1b52260e4b24a4542382.png" title=" Then validar direccion envio$$ lambda$958/284145670 should be 'Te recomendamos revisar muy bien tu direcci&amp;oacute;n y si tu barrio est&amp;aacute; dentro de las zonas de cobertura, para que tu muestra llegue sin problemas a la puerta de tu casa.'" width="1920"/>
+                <img src="3f4108afc743b81341c022b84778323c828deb107ead05f7f03dd02a36f599a2.png" title=" Pragma validar direccion envio" width="1920"/>
+                <img src="3f4108afc743b81341c022b84778323c828deb107ead05f7f03dd02a36f599a2.png" title=" pragma clicks on Boton para finalizar el proceso de pedido" width="1920"/>
+                <img src="3f4108afc743b81341c022b84778323c828deb107ead05f7f03dd02a36f599a2.png" title=" Pragma validar direccion envio (completed)" width="1920"/>
+                <img src="3f4108afc743b81341c022b84778323c828deb107ead05f7f03dd02a36f599a2.png" title=" Y confirmo que los datos de envio son correctos (completed)" width="1920"/>
+                <img src="f25a8cda7d5276e281934f9bca5b8d6532cc459991ec70a3f724b57ebff94527.png" title=" Entonces deberia ver un mensaje indicando que recibimos la solicitud de muestras gratis" width="1920"/>
+                <img src="f25a8cda7d5276e281934f9bca5b8d6532cc459991ec70a3f724b57ebff94527.png" title=" Then verficar msg pedido exitoso$$ lambda$959/100033245 should be 'RECIBIMOS LA SOLICITUD DE TU MUESTRA GRATIS'" width="1920"/>
+                <img src="f25a8cda7d5276e281934f9bca5b8d6532cc459991ec70a3f724b57ebff94527.png" title=" Entonces deberia ver un mensaje indicando que recibimos la solicitud de muestras gratis (completed)" width="1920"/>
+                <img src="f25a8cda7d5276e281934f9bca5b8d6532cc459991ec70a3f724b57ebff94527.png" title=" 1: Pedir muestra gratis logueado ({correo=falsemail08@gg.col, contrasena=123456}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.23</span>
+</div>
+</body>
+</html>

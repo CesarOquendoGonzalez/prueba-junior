@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Inicio de sesion con correo electronico","inicio de sesion con correo","SUCCESS","2023-05-26T21:44:58.404-05:00[America/Bogota]","0.0","15.63"
+"Login en la pagina principal de Tena","inicio de sesion con documento","SUCCESS","2023-05-26T21:45:14.049-05:00[America/Bogota]","0.0","14.36"
+"Inicio de sesion con celular","inicio de sesion con celular","SUCCESS","2023-05-26T21:45:28.419-05:00[America/Bogota]","0.0","13.68"

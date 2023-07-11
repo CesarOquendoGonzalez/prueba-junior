@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a0539060411b0597733b0f09d659f356cbc5db3960597f8599f5b7ea6d5d413b.html">Pedir Muestra Gratis Sin Estar Registrado Ni Logueado</a></span>
+                > <span class="truncate-60"><a
+                    href="33c649095948d096fdb4026cb5113ccb163e8c28fd96da918506c298f3cdbd7c.html">Pedir muestra sin estar registrado en la pagina </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="dafb266f68444cb7f2451c923d70c1428ac45470c361842b818e6daa9bcd4fa8.html"><i class="bi bi-chat-text"></i> Themes</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-05-2023 21:47</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Pedir Muestra Gratis Sin Estar Registrado Ni Logueado </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Pedir muestra sin estar registrado en la pagina
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando ingrese mi &lt;correo_verficar&gt;<br>Entonces deberia ver un mensaje indicando que no estoy registrado<br>Cuando Clickeo en registrate<br>Y el usuario escoge la opcion de registro SOY COMPRADOR<br>Y llena los datos iniciales &lt;numDocumento&gt; &lt;correo&gt; y &lt;celular&gt;<br>Y llena los datos &lt;nombres&gt; &lt;apellidos&gt; &lt;direccion&gt; &lt;barrio&gt; &lt;dia&gt; &lt;ano&gt; &lt;contrasena&gt; &lt;confContrasena&gt; de informacion general<br>Entonces deberia ver un mensaje indicando que se recibio la solicitud de muestras gratis</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" 1: Pedir muestra sin estar registrado en la pagina ({correo_verficar=faalsemail24@gg.col, numDocumento=77733345678, correo=faalsemail24@gg.col, celular=5102102012, nombres=pruebas, apellidos=pruebas, direccion=callecitas, barrio=cagala, dia=12, ano=1990, contrasena=123456, confContrasena=123456})" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Dado que me encuentro en la pagina de tena e ingreso a muestras gratis" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Pragma abrir navegador" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" pragma opens the browser at https://d92wr353oox0h.cloudfront.net/" width="1920"/>
+                <img src="82c8d361bd94ee1c58e7d49514fcd5939544fbacd23b0e67039a1c0758b424f7.png" title=" Pragma abrir navegador (completed)" width="1920"/>
+                <img src="2a4da7a3fae38b05e1f2e722a36e19a1d07cb6c9535b3e0dd6eaab5deae0e91d.png" title=" Pragma ingresar muestra gratis" width="1920"/>
+                <img src="2a4da7a3fae38b05e1f2e722a36e19a1d07cb6c9535b3e0dd6eaab5deae0e91d.png" title=" pragma clicks on Boton a la seccion de muestra gratis" width="1920"/>
+                <img src="2a4da7a3fae38b05e1f2e722a36e19a1d07cb6c9535b3e0dd6eaab5deae0e91d.png" title=" Pragma ingresar muestra gratis (completed)" width="1920"/>
+                <img src="2a4da7a3fae38b05e1f2e722a36e19a1d07cb6c9535b3e0dd6eaab5deae0e91d.png" title=" Dado que me encuentro en la pagina de tena e ingreso a muestras gratis (completed)" width="1920"/>
+                <img src="8ef076b966d443116c45eb85ac50557007575e0f0b77e126010f2112b760b3b6.png" title=" Y filtro los productos" width="1920"/>
+                <img src="8ef076b966d443116c45eb85ac50557007575e0f0b77e126010f2112b760b3b6.png" title=" Pragma muestra gratis filtro" width="1920"/>
+                <img src="8ef076b966d443116c45eb85ac50557007575e0f0b77e126010f2112b760b3b6.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="d2df288c2d6a9de64031c138f8b3d0e92acd92ea0ac4645ba348813c177612ce.png" title=" pragma clicks on Boton para seleccionar la opcion  PANALES dentro de la seccion de categorias" width="1920"/>
+                <img src="b46862cfae3c435f1d518433659bf988073d228aa6efd527082ae837e70410ab.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="309182ce59391580e5c03577f099c3aa449ed94252d79331a98dafbd9eff6634.png" title=" pragma clicks on Boton para seleccionar la opcion PROSKIN dentro de la seccion de LINEA" width="1920"/>
+                <img src="e04c2855ab9d9278f7407c44c408d145e38b768df564fac55873d220bcc6d9a1.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="bc442e55a8289ef58169f5a64da345fa5ade05c2abc134f21833ff08dd56e5cd.png" title=" pragma clicks on Boton para seleccionar la opcion MUJERES dentro de la seccion de USUARIO" width="1920"/>
+                <img src="0fd53bd70dbb45d89552560d06025295a5cf286ad2e905d0026c2336eb37c958.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="6231263571113f18665ba0ccd2f5905a24360cd7af0761fb7ef714659b351030.png" title=" pragma clicks on Boton para seleccionar la opcion MODERADO dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="3b6d83b4165d184d020d02153bffd63b0fbd8210cffc776cebc1d9e43cfa01b5.png" title=" pragma clicks on Boton Eliminar todos los filtros que tenemos seleccionados actualmente" width="1920"/>
+                <img src="d0f4a145352aa1370f8b783e0d86f755df31334667b71c95fcfc5d941b960e4e.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="2051ebb6076e541c5708494e34af93aa36349fcb73474f7b17a3ddd9150b6ae0.png" title=" pragma clicks on Boton para seleccionar la opcion ROPA INTERIOR ABSORBENTE dentro de la seccion de categorias" width="1920"/>
+                <img src="839424a5fd29b29879ddb33a2cdb8f5ef2879fef549c6553a51478a61cf8160f.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="3cc706595098eb816e120abcdac92f56b3037a4a529fcaf234dc02b984d6b4ea.png" title=" pragma clicks on Boton para seleccionar la opcion DISCREET dentro de la seccion de LINEA" width="1920"/>
+                <img src="7d28c7ee992e5867df758c3970c7cb808145e25e7ad8380c1aa9028635ea12bf.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="ba76a527ba0719816e4d0dc3162ba9580be0cacd4c551cb2adc9c57feed28572.png" title=" pragma clicks on Boton para seleccionar la opcion MUJERES dentro de la seccion de USUARIO" width="1920"/>
+                <img src="9c5e697b23579d4a80e2b1fd69962501d2130d7034ef0fa26cbac2c923cd8497.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="1415bc50239070ee2e978525ef84005c13eb7e417fc59b93ed1391f9573b5766.png" title=" pragma clicks on Boton para seleccionar la opcion LEVE dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="76b9b4fa3dc6b8b7e108d534e07a1caebf2f690c799143c5fcbc887b4488db4f.png" title=" pragma clicks on Boton Eliminar todos los filtros que tenemos seleccionados actualmente" width="1920"/>
+                <img src="018a7457bcf7c2cb661101ce9e87c8246d1184f3aca1bd1c1f18de6d17d71cf1.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="d18d7e3af39068cbb32b81875ac037c8ceb64b9e2e85420dfe6381bcafd4a423.png" title=" pragma clicks on Boton para seleccionar la opcion PROTECTORES DIARIOS MUJER dentro de la seccion de categorias" width="1920"/>
+                <img src="dea6a1a730012c46bcb5adc0fe9697ada80f98ab7d9f01ff30090e06379b68e8.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="e5336ff5ed31d47b1799df5ded27ca4462f73fb57cc01649224cf8e0e5ab510b.png" title=" pragma clicks on Boton para seleccionar la opcion DISCREET dentro de la seccion de LINEA" width="1920"/>
+                <img src="af365cfb5aa17c146422ab05f205711f916c55573048c930388047955a0fbcfe.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="8115549ebd6b1808df81e1ece6889283c62f341051b1f3b5ee2e0d289630c09d.png" title=" pragma clicks on Boton para seleccionar la opcion CUIDADORES dentro de la seccion de USUARIO" width="1920"/>
+                <img src="777dbd342750a938e4dba2d9a64144f38abfe10c9299aeb771c4b720538a1524.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="1e571628c8b3297af3e69113174cc8191d5383ef5d6141dcaee525e48626beb0.png" title=" pragma clicks on Boton para seleccionar la opcion MODERADO dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="b6df422c0bf91551a526bd53d2383b2d0be23a9bc02f16712c8f73b8a5ccfc1b.png" title=" pragma clicks on Boton Eliminar todos los filtros que tenemos seleccionados actualmente" width="1920"/>
+                <img src="36d0ed9549360f3b6bd512c8186f8b55bfc4da12dabc618ad5f8128dfe4e333f.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="fbb22f6074e626da97b3a17f427ba7cfc4ff26c69c16c7ad23b7a3f964079525.png" title=" pragma clicks on Boton para seleccionar la opcion TOALLAS HIGIENICAS dentro de la seccion de categorias" width="1920"/>
+                <img src="4e7e2f360f77df34acf7801233b5cef1d22d81659f618acddd6733f145ba20e3.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="5212f5782796cdf8ac766c5941990a596560d8ba5769ebd722eff92e44b529f3.png" title=" pragma clicks on Boton para seleccionar la opcion PROSKIN dentro de la seccion de LINEA" width="1920"/>
+                <img src="36ce6f0169eb2c23628c9182f3be546c596916cc0252469c73b7232b8a4a4b97.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="8f46679c7f1b10410da21b017ebc5bf41190ddf6177ff9b3d948d3043e5211d0.png" title=" pragma clicks on Boton para seleccionar la opcion CUIDADORES dentro de la seccion de USUARIO" width="1920"/>
+                <img src="e238a83a3d409df0291421a9becb3dad609c6116e4736eced29c0293cb939d94.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="8c6e742283660be0949b8963ad80634470e03f673c87562939e483931d8b4b75.png" title=" pragma clicks on Boton para seleccionar la opcion LEVE dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="ab7f6ba23c751c3283522f45045a9d9802544909bf6e77896755c358aed9858f.png" title=" pragma clicks on Boton Eliminar todos los filtros que tenemos seleccionados actualmente" width="1920"/>
+                <img src="3e61995d3c07e03b103b8c478235c7788e0cb2638267532e7f10286e8be20027.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="3be4b499439e5c786ed1963f1b09b348c54ef812781d6d255bffb3482d8a2813.png" title=" pragma clicks on Boton para seleccionar la opcion PROTECTORES DIARIOS MUJER dentro de la seccion de categorias" width="1920"/>
+                <img src="bbbab50d5628ec888a150b882fd5d8e531d2ae038c3066e8433e735806fe4ef8.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="34c53a93bbe2b457433a2f97b0e92cd8bcfcaadeb0a287db83bd65a7efdeacdd.png" title=" pragma clicks on Boton para seleccionar la opcion PROSKIN dentro de la seccion de LINEA" width="1920"/>
+                <img src="4a1d05381f7122deaa8079bf035ec9803c424dcc785a704cbb52692918e728fd.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="7b4b7ab56d058958da6e1ece7ebb68bffd780cf35ff125c8e3394d5f4b083569.png" title=" pragma clicks on Boton para seleccionar la opcion CUIDADORES dentro de la seccion de USUARIO" width="1920"/>
+                <img src="a0f2b08ffca87cd5aa1f97223362f96c531e61803d72d5ea740707f8d479651e.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="424002119f60c3f58a5111c254a13c4c0aff4d775fc3b56e464574daf566f897.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="67f66b3596973ba09c34dbb2e0334c36f2ac7b3bc30e16badc796a4d51bb61d3.png" title=" pragma clicks on Boton Eliminar todos los filtros que tenemos seleccionados actualmente" width="1920"/>
+                <img src="7722816783f01625d2814832c9ffec7df0247677e088dbe003b3048c08c5dea5.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de categorias" width="1920"/>
+                <img src="d310399a567d202cddead08a6641240d85489b33707c0ce758dca9023bc4aa29.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de categorias" width="1920"/>
+                <img src="38529f1c6c1e4153c7e47aae18006a5054849efaed07f2f87fc06bdaaa5f3ddc.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de LINEA" width="1920"/>
+                <img src="afab1a3bc24f0aeea72bab09980e8132582e4e01635b38a01f046e01f576c870.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de LINEA" width="1920"/>
+                <img src="69c85edd74e7e50e4a2772c05f279b3727257de2516f31590d50e68351586147.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de USUARIO" width="1920"/>
+                <img src="d208e5141e7f1c40561e4b92f69ba391ee33f82ddc17ad54f4b830e661730b8f.png" title=" pragma clicks on Boton para seleccionar la opcion TODOS dentro de la seccion de USUARIO" width="1920"/>
+                <img src="79d1b5e5f0328b2e3a535bf0aed7b1aa6aa889b0184de01f206aec8b19ba3bd4.png" title=" pragma clicks on Boton para desplegar las opciones que hay dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="8f7f87f0878ea2767da44976bf45dcf11c8617ff9f4150ffded709c030a81dfc.png" title=" pragma clicks on Boton para seleccionar la opcion FUERTE dentro de la seccion de TIPO DE INCONTINGENCIA" width="1920"/>
+                <img src="4fb1db164848a99edb6b4e587b88c86b891486af6a497340243a97221b7f44d2.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="e295a3dd09ece43f4967a76174bae89c6902a4dc41a92ffeeaace4953b31a938.png" title=" pragma clicks on Boton para seleccionar cualquiera de los productos que se mostraran una vez se realiza el filtro" width="1920"/>
+                <img src="e295a3dd09ece43f4967a76174bae89c6902a4dc41a92ffeeaace4953b31a938.png" title=" Pragma muestra gratis filtro (completed)" width="1920"/>
+                <img src="e295a3dd09ece43f4967a76174bae89c6902a4dc41a92ffeeaace4953b31a938.png" title=" Y filtro los productos (completed)" width="1920"/>
+                <img src="556a22b189809b24b178f1bdc31578fee6f8f048581ff6bf69ab9452d2bcacd6.png" title=" Y escojo el tipo de usuario que soy para agregar mi producto y lo solicito" width="1920"/>
+                <img src="556a22b189809b24b178f1bdc31578fee6f8f048581ff6bf69ab9452d2bcacd6.png" title=" Pragma muestras gratis interna prod" width="1920"/>
+                <img src="556a22b189809b24b178f1bdc31578fee6f8f048581ff6bf69ab9452d2bcacd6.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="953492cd47550d07963a2e51628bd1183aead44db062c4287c42de61c54c8ab1.png" title=" pragma clicks on Boton interno de solicitar muestra para que nos lleve hasta la seccion de donde se selecciona el tipo de usuario que solicita la muestra" width="1920"/>
+                <img src="d4c50882f3af9028e4126ff53ea752f8b9c32055b6b551da7b7a76457dc70df5.png" title=" pragma clicks on Boton para seleccionar el tipo de solicitante como cuidador NO profesional" width="1920"/>
+                <img src="7ccaf42e4133e698cf92a275464abd2d53f77559127b598993260014cb77921c.png" title=" pragma clicks on Boton para agregar productos a la seccion inferior de muestra gratis" width="1920"/>
+                <img src="391ebe268a9ed2b59e63146e51a2edea10c78bbbbc25a42d660a001031047a75.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="68ff6772a7ec4b85360422745fa51bf4757df1d24ef0743dc55c15621c9eb9f0.png" title=" pragma clicks on Boton seleccionar las muestras en el home una vez las has agregado al carrito" width="1920"/>
+                <img src="68ff6772a7ec4b85360422745fa51bf4757df1d24ef0743dc55c15621c9eb9f0.png" title=" Pragma muestras gratis interna prod (completed)" width="1920"/>
+                <img src="68ff6772a7ec4b85360422745fa51bf4757df1d24ef0743dc55c15621c9eb9f0.png" title=" Y escojo el tipo de usuario que soy para agregar mi producto y lo solicito (completed)" width="1920"/>
+                <img src="07b5cf4e5aeb909b8a7c6eb44dc92df6b74b31f3125e95ac40160cdf9abfac78.png" title=" Cuando ingrese mi faalsemail24@gg.col" width="1920"/>
+                <img src="07b5cf4e5aeb909b8a7c6eb44dc92df6b74b31f3125e95ac40160cdf9abfac78.png" title=" Pragma ingresar correo verificacion" width="1920"/>
+                <img src="07b5cf4e5aeb909b8a7c6eb44dc92df6b74b31f3125e95ac40160cdf9abfac78.png" title=" pragma enters 'faalsemail24@gg.col' into Campo ingresar tu correo y verificar que no estar registrada" width="1920"/>
+                <img src="65ec136c048ea2eb1559b75da8e7a06fbcbd6912b353c79a73e28c998541c793.png" title=" pragma clicks on Boton para continuar a la siguiente pantalla" width="1920"/>
+                <img src="65ec136c048ea2eb1559b75da8e7a06fbcbd6912b353c79a73e28c998541c793.png" title=" Pragma ingresar correo verificacion (completed)" width="1920"/>
+                <img src="65ec136c048ea2eb1559b75da8e7a06fbcbd6912b353c79a73e28c998541c793.png" title=" Cuando ingrese mi faalsemail24@gg.col (completed)" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Entonces deberia ver un mensaje indicando que no estoy registrado" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Then validar correo verficacion$$ lambda$879/384766304 should be 'no te encuentras en nuestra base de datos,'" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Entonces deberia ver un mensaje indicando que no estoy registrado (completed)" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Cuando Clickeo en registrate" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Pragma validar correo verficacion" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" pragma clicks on Boton para continuar a la pantalla de registro" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Pragma validar correo verficacion (completed)" width="1920"/>
+                <img src="ffe6f52322bedf8040098565628236153c9a5b5d829eabc1225531bd3ba0fe2a.png" title=" Cuando Clickeo en registrate (completed)" width="1920"/>
+                <img src="07cddb3061f11ebd6af71cb18c5b0c61905435f150587274eca63392317cf0d8.png" title=" Y el usuario escoge la opcion de registro SOY COMPRADOR" width="1920"/>
+                <img src="07cddb3061f11ebd6af71cb18c5b0c61905435f150587274eca63392317cf0d8.png" title=" Pragma seleccionar tipo registro comprador" width="1920"/>
+                <img src="07cddb3061f11ebd6af71cb18c5b0c61905435f150587274eca63392317cf0d8.png" title=" pragma clicks on Boton para seleccionar el metodo de registro de comprador" width="1920"/>
+                <img src="07cddb3061f11ebd6af71cb18c5b0c61905435f150587274eca63392317cf0d8.png" title=" Pragma seleccionar tipo registro comprador (completed)" width="1920"/>
+                <img src="07cddb3061f11ebd6af71cb18c5b0c61905435f150587274eca63392317cf0d8.png" title=" Y el usuario escoge la opcion de registro SOY COMPRADOR (completed)" width="1920"/>
+                <img src="426437287c672859c628435715de684ca21d0080bb902795bec34b992aa48206.png" title=" Y llena los datos iniciales 77733345678 faalsemail24@gg.col y 5102102012" width="1920"/>
+                <img src="426437287c672859c628435715de684ca21d0080bb902795bec34b992aa48206.png" title=" Pragma llenar datos" width="1920"/>
+                <img src="426437287c672859c628435715de684ca21d0080bb902795bec34b992aa48206.png" title=" pragma clicks on Boton seleccionar el tipo de documento" width="1920"/>
+                <img src="c351ba9f117c24fd55d75008fb83b839c555319a1c15eb2f92cf6f167c4efbbd.png" title=" pragma clicks on Boton seleccionar el pasaporte" width="1920"/>
+                <img src="f2402a87b1a64fb06f621abb9c9c50a86abb4203c6f5159f899c70bc639c6271.png" title=" pragma enters '77733345678' into Campo para ingresar el numero de ID" width="1920"/>
+                <img src="dc0d661a832bfcced44c16dc771b9c378a17115e566069c15e5ba5160d3cbb74.png" title=" pragma enters 'faalsemail24@gg.col' into Campo para ingresar el correo electronico" width="1920"/>
+                <img src="3158db693fc075b8d886afe2db241f9ac454a0cc63728d18cd7e1b7ff0d8cd05.png" title=" pragma enters '5102102012' into Campo para ingresar el correo electronico" width="1920"/>
+                <img src="a1ad227abea8c36f2ab800244735035d003b40c6b6458a43b8ad950bdcf58300.png" title=" pragma clicks on Boton para aceptar los terminos y condiciones" width="1920"/>
+                <img src="f18c5a93776237fc687d0f74abbcee078b0829bc8ae16f4b6fce62824bb5101b.png" title=" pragma clicks on Boton para aceptar el tratamiento de datos" width="1920"/>
+                <img src="28816ee06f18492b6b403f62360846f6d77e0fceab11f4613391cfee4a188bc8.png" title=" pragma clicks on Boton para continuar a la siguiente pantalla" width="1920"/>
+                <img src="28816ee06f18492b6b403f62360846f6d77e0fceab11f4613391cfee4a188bc8.png" title=" Pragma llenar datos (completed)" width="1920"/>
+                <img src="28816ee06f18492b6b403f62360846f6d77e0fceab11f4613391cfee4a188bc8.png" title=" Y llena los datos iniciales 77733345678 faalsemail24@gg.col y 5102102012 (completed)" width="1920"/>
+                <img src="5c40f1c5fe8606dd567970ddc4488cd01c07e0625f07d7951e4b35f84fc36a6a.png" title=" Y llena los datos pruebas pruebas callecitas cagala 12 1990 123456 123456 de informacion general" width="1920"/>
+                <img src="5c40f1c5fe8606dd567970ddc4488cd01c07e0625f07d7951e4b35f84fc36a6a.png" title=" Pragma llenar info general" width="1920"/>
+                <img src="5c40f1c5fe8606dd567970ddc4488cd01c07e0625f07d7951e4b35f84fc36a6a.png" title=" pragma enters 'pruebas' into Campo para ingresar el nombre del usuario" width="1920"/>
+                <img src="f75acc747616a0b59a07c1aec2f4183d1de94579ba0c0b9183446d590315e575.png" title=" pragma enters 'pruebas' into Campo para ingresar el apellido del usuario" width="1920"/>
+                <img src="1718960f2f93f527459d824029148abe7f940aa58317473a93e322a19c0f3dbd.png" title=" pragma clicks on boton para poder desplegar el menu del genero" width="1920"/>
+                <img src="1fe89435df668a137a4ac75f5ddc7b3c587a2c1119845aaa53550bcde3439ddb.png" title=" pragma clicks on boton para poder seleccionar el genero femenino" width="1920"/>
+                <img src="a7292a4e5592923ffd0a4974bf1eeb517a674ded65ad865dbe4a0ddf1442cf69.png" title=" pragma clicks on boton para poder desplegar los departamentos" width="1920"/>
+                <img src="a0ae3231551a7ffa0b02c80ac7a8e54346a477c50c6031d80692f3525e84b609.png" title=" pragma clicks on boton para poder seleccionar un departamento especifico" width="1920"/>
+                <img src="31781f83226ba2b1b60da1a94678f9fcf559724d1ec82e93ea47b5cb04de597e.png" title=" pragma enters 'callecitas' into Campo para ingresa la direccion" width="1920"/>
+                <img src="9c64c9d8f838597d8568438f03f67c1943d9579ad7df399017fb949d675d5e75.png" title=" pragma enters 'cagala' into Campo para ingresa el barrio" width="1920"/>
+                <img src="eb574bd9e4ccd221189e07fce38151529e6ce69960b67d60176769c8fe0fdaf6.png" title=" pragma clicks on boton para poder desplegar todas las ciudades" width="1920"/>
+                <img src="06478389b0d45682b8b3e83fbe557cfb29298e142050f054f5ff8aed690333a8.png" title=" pragma clicks on boton para poder seleccionar una ciudad especifica" width="1920"/>
+                <img src="a3592262c8de70a9a647c14bd505a888363da0fccd9ee74f1ebbb18513dd433b.png" title=" pragma enters '12' into Campo para ingresar el dia de nacimiento" width="1920"/>
+                <img src="9007771642b4faa9246725bb63f3d85f4defe293bb58ca3844ea935430359fdb.png" title=" pragma clicks on boton para poder desplegar la lista de meses de nacimiento" width="1920"/>
+                <img src="086270a7dd33e1e5c72f4eea4b5c8cb76f933823abe2d42e93f1bbc601e60a7a.png" title=" pragma clicks on boton para poder seleccionar el mes de nacimiento" width="1920"/>
+                <img src="7fd8b76de58f9edcdb21eb1cff6ee53de7ea1424c1f527771599f2c8633f05a8.png" title=" pragma enters '1990' into boton para poder seleccionar el A&Atilde;&lsquo;O de nacimiento" width="1920"/>
+                <img src="9f052eeaaa5075261a3317fa736f035e6a852ff7b2c222cddb1a36b2a0c17cb3.png" title=" pragma enters '123456' into Campo para ingresar la contrase&Atilde;&plusmn;a" width="1920"/>
+                <img src="5550e969186491c709956b9ae9ba554d60b0855ca2d1549b89a01adcd4834f4c.png" title=" pragma enters '123456' into Campo para confirmar la contrase&Atilde;&plusmn;a" width="1920"/>
+                <img src="422325709bf3ef66f95192141b63be3bab0bd2c555327015f09805c048424140.png" title=" pragma clicks on Boton para aceptar las cookies de la pagina al iniciar" width="1920"/>
+                <img src="a383a96f9302f4113566422680425a67896fa8b96fa93d940b00e2014b57d408.png" title=" pragma clicks on boton para poder terminar el proceso de creacion de cuentas" width="1920"/>
+                <img src="a383a96f9302f4113566422680425a67896fa8b96fa93d940b00e2014b57d408.png" title=" Pragma llenar info general (completed)" width="1920"/>
+                <img src="a383a96f9302f4113566422680425a67896fa8b96fa93d940b00e2014b57d408.png" title=" Y llena los datos pruebas pruebas callecitas cagala 12 1990 123456 123456 de informacion general (completed)" width="1920"/>
+                <img src="6d2fca4af7f913e8ff4f9ec10679e65fb9b36f6f8d1e5a21f7884332235cc3f1.png" title=" Entonces deberia ver un mensaje indicando que se recibio la solicitud de muestras gratis" width="1920"/>
+                <img src="6d2fca4af7f913e8ff4f9ec10679e65fb9b36f6f8d1e5a21f7884332235cc3f1.png" title=" Then verficar msg pedido exitoso$$ lambda$941/1414727236 should be 'Recibimos tu solicitud con &amp;eacute;xito'" width="1920"/>
+                <img src="6d2fca4af7f913e8ff4f9ec10679e65fb9b36f6f8d1e5a21f7884332235cc3f1.png" title=" Entonces deberia ver un mensaje indicando que se recibio la solicitud de muestras gratis (completed)" width="1920"/>
+                <img src="6d2fca4af7f913e8ff4f9ec10679e65fb9b36f6f8d1e5a21f7884332235cc3f1.png" title=" 1: Pedir muestra sin estar registrado en la pagina ({correo_verficar=faalsemail24@gg.col, numDocumento=77733345678, correo=faalsemail24@gg.col, celular=5102102012, nombres=pruebas, apellidos=pruebas, direccion=callecitas, barrio=cagala, dia=12, ano=1990, contrasena=123456, confContrasena=123456}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.23</span>
+</div>
+</body>
+</html>

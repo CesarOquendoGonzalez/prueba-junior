@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c54c253037a9e61380cdb603c2edc6add39d99f384bb601b69dc328af33d2d9c.html">Validar Campos Formulario</a></span>
+                > <span class="truncate-60"><a
+                    href="972e4c7fe0514623d7b7eae3440bbfa5f68532701692511f4c870d60b7c830e8.html">Escenario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-07-2023 01:55</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Validar Campos Formulario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Escenario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando el usuario ingrese un &lt;correo&gt; y &lt;contrasena&gt; errados varias veces</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ddad26c7075960163eac208ee2f83f9c818e3f1b866174a4d0d114a793791a1b.png" title=" 1: Escenario: Numero de intentos fallidos ({correo=qapruebasacxv@gmail.com, contrasena=123456})" width="1920"/>
+                <img src="ddad26c7075960163eac208ee2f83f9c818e3f1b866174a4d0d114a793791a1b.png" title=" Dado Que la usuaria avanza hasta la pantalla de login" width="1920"/>
+                <img src="ddad26c7075960163eac208ee2f83f9c818e3f1b866174a4d0d114a793791a1b.png" title=" Pragma abrir navegador" width="1920"/>
+                <img src="ddad26c7075960163eac208ee2f83f9c818e3f1b866174a4d0d114a793791a1b.png" title=" pragma opens the browser at http://opencart.abstracta.us/" width="1920"/>
+                <img src="ddad26c7075960163eac208ee2f83f9c818e3f1b866174a4d0d114a793791a1b.png" title=" Pragma abrir navegador (completed)" width="1920"/>
+                <img src="ca15c841f2a5798fba31ca259c8b0830a879f1a3de147fc578702347d89cd8c6.png" title=" Pragma ingresar a login" width="1920"/>
+                <img src="ca15c841f2a5798fba31ca259c8b0830a879f1a3de147fc578702347d89cd8c6.png" title=" pragma clicks on Boton para ingresar al desplegable donde puede iniciar sesion o registrarme" width="1920"/>
+                <img src="bbc6d28496814f10b88af7ff439bf542e8a5e77101ae6fea73ad5f1f4621f261.png" title=" pragma clicks on Boton para ingresar al login" width="1920"/>
+                <img src="bbc6d28496814f10b88af7ff439bf542e8a5e77101ae6fea73ad5f1f4621f261.png" title=" Pragma ingresar a login (completed)" width="1920"/>
+                <img src="bbc6d28496814f10b88af7ff439bf542e8a5e77101ae6fea73ad5f1f4621f261.png" title=" Dado Que la usuaria avanza hasta la pantalla de login (completed)" width="1920"/>
+                <img src="a2a68bb648c69af5a63f460a806f33177ef9ebe5349f5d75a86649e3d2a51242.png" title=" Cuando el usuario ingrese un qapruebasacxv@gmail.com y 123456 errados varias veces" width="1920"/>
+                <img src="a2a68bb648c69af5a63f460a806f33177ef9ebe5349f5d75a86649e3d2a51242.png" title=" Pragma iniciar sesion" width="1920"/>
+                <img src="a2a68bb648c69af5a63f460a806f33177ef9ebe5349f5d75a86649e3d2a51242.png" title=" pragma enters 'qapruebasacxv@gmail.com' into Campo para ingresar el correo electronico" width="1920"/>
+                <img src="a5c0a1e393365078c6ea413e49f89f55ad952feb87deeb6034f123619519f685.png" title=" pragma enters '123456' into Campo para ingresar la contrasena" width="1920"/>
+                <img src="a5c0a1e393365078c6ea413e49f89f55ad952feb87deeb6034f123619519f685.png" title=" Pragma iniciar sesion (completed)" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="a94d1b02512b86b7ddaf8ad890a5119249b51e6ba2f2eae05b7ffc67fe6bcfc4.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" Pragma clic login" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" pragma clicks on Boton para ingresar loguearse una vez se ingresan los datos" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" Pragma clic login (completed)" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" Then validar errores login$$ lambda$945/1124131392 should be 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.'" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" Cuando el usuario ingrese un qapruebasacxv@gmail.com y 123456 errados varias veces (completed)" width="1920"/>
+                <img src="fa8e5c5030cdd839c14a670535c38a61c1af217b843a4b22b017de282710a241.png" title=" 1: Escenario: Numero de intentos fallidos ({correo=qapruebasacxv@gmail.com, contrasena=123456}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.23</span>
+</div>
+</body>
+</html>
