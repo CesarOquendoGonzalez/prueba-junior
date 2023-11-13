@@ -55,9 +55,9 @@ dependencies {
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "org.assertj:assertj-core:${assertJVersion}"
 }
-dependencies {
-    implementation 'org.seleniumhq.selenium:selenium-devtools-v86:4.8.3'
-}
+//dependencies {
+  //  implementation 'org.seleniumhq.selenium:selenium-devtools-v86:4.8.3'
+//}
 
 test {
     testLogging.showStandardStreams = true
