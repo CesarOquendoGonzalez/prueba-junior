@@ -56,11 +56,10 @@ dependencies {
             "org.assertj:assertj-core:${assertJVersion}"
 }
 dependencies {
-   implementation 'org.seleniumhq.selenium:selenium-devtools-v86:4.8.3'
+   implementation 'org.seleniumhq.selenium:selenium-devtools-v112:4.10.0'
     implementation 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.15.0'
     implementation 'org.seleniumhq.selenium:selenium-support:4.15.0'
     implementation 'org.seleniumhq.selenium:selenium-remote-driver:4.15.0'
-    implementation 'org.seleniumhq.selenium:selenium-devtools-v112:4.10.0'
 }
 
 test {
