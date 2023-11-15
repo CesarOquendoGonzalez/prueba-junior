@@ -9,5 +9,7 @@ public class HomePage extends PageObject {
             located(By.xpath("//span[@class='caret']"));
     public static final Target BTN_LOGIN= Target.the("Boton para ingresar al login").
             located(By.xpath("/html/body/nav/div/div[2]/ul/li[2]/ul/li[2]/a"));
+    public static final Target BTN_REGISTER= Target.the("Boton para ingresar al login").
+            located(By.xpath("/html/body/nav/div/div[2]/ul/li[2]/ul/li[1]/a"));
 
 }
